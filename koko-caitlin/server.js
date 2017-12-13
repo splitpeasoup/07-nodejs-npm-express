@@ -9,7 +9,7 @@ app.use(express.static('./public'));
 app.get('/.data/hackerIpsum.json', function(req,res){
   res.sendgFile('./public/index.html');
 });
- 
+
 app.listen(3000, function(){
   console.log('sweetcode app listening on port 3000');
 });
