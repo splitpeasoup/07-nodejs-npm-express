@@ -18,6 +18,8 @@ app.get('/new',(req,res)=>{
   res.sendfile('public/new.html');
 });
 
+
+
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 
@@ -27,4 +29,8 @@ app.post('/articles', bodyParser, function(request, response) {
   response.send('Record posted to server!!');
 });
 
+
+app.use(function (req,res) {
+  res.status(404).send('Error');
+});
 
