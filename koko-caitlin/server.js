@@ -4,12 +4,14 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(req,res){
-  res.send('Hello SweetCode!');
+app.use(express.static('./public'));
+
+app.get('/.data/hackerIpsum.json', function(req,res){
+  res.sendgFile('./public/index.html');
 });
 
-app.listen(5000, function(){
-  console.log('sweetcode app listening on port 5000')
+app.listen(3000, function(){
+  console.log('sweetcode app listening on port 3000');
 });
 
 const bodyParser = require('body-parser').urlencoded({extended: true});
