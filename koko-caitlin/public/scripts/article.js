@@ -22,9 +22,9 @@ Article.prototype.toHtml = function() {
 };
 
 Article.loadAll = rawData => {
-  rawData.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)))
+  rawData.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
 
-  rawData.forEach(articleObject => Article.all.push(new Article(articleObject)))
+  rawData.forEach(articleObject => Article.all.push(new Article(articleObject)));
 };
 
 Article.fetchAll = () => {
@@ -50,7 +50,7 @@ Article.prototype.insertRecord = function(callback) {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // The call back function above is set up for a new article to populate the browser. If call back is true, return the callback aka push new article to browser. IN this case is it true so it's invoked.
       if (callback) callback();
     });
 };

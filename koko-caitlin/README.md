@@ -3,17 +3,25 @@
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+
 Using the ExpressJS framework to set up a server file to handle HTTP requests and deliver responses so that users able to create new articles and allow guests to retrieve those new articles.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+Node.js/NPM will need to be installed and initialized by ‘npm init’ with along with  local packages express, body-parser & nodemon. 
+Set up the ExpressJS framework by creating an express variable in server.js and calling via a second variable and set it to use a public directory for local files.
+Set up a listening function to know when the server is up. The get command will get the necessary data base information and send it to the specified address (index.html).
+After nodemon is installed via npm, run the node server in terminal and navigate in browser to the specified host. 
+Map a second app.get() independent of the one used to populate the index.html. This function will be mapped to the new.html. This will make the form available for the user to add articles.
+Refactor functions that don’t contain the this variable to arrow functions.
+Generate a 404 console response when the incorrect address is attempted by a use() express command when status 404 is encountered.
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Used node.js/NPM, and local packages express, body-parser & nodemon. ExpressJS framework.
+
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
 12-13-2017 10:21 am - Our app has packages installed and a starting express framework.
 12-13-2017 10:58 am - Our app has an instantiated the express framework and started the node servers
@@ -22,5 +30,5 @@ Using the ExpressJS framework to set up a server file to handle HTTP requests an
 12-13-2017 1:55 pm - Our app has a 404 error page.
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
+Worked with Jesus, Steve, Jordan, and Yohanes. 
+https://www.npmjs.com/ 
